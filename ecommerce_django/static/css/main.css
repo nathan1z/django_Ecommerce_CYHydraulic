@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* Root */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: hsl(210, 30%, 12%); /* Fondo oscuro */
+  color: hsl(0, 0%, 90%); /* Texto claro */
+  padding-bottom: 50px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: hsl(0, 0%, 95%); /* Encabezados en blanco suave */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.box-element{
+    box-shadow: 5px 5px 20px hsl(210, 30%, 5%), -5px -5px 15px hsl(210, 30%, 18%); 
+    color: white;
+    background-color: hsl(210, 30%, 18%);
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.box-element:hover {
+    transform: translateY(-5px);
+    box-shadow: 10px 10px 25px hsl(210, 30%, 5%), -10px -10px 20px hsl(210, 30%, 20%);
+  }
+
+  .btn {
+    border-radius: 5px;
+    background-color: hsl(210, 30%, 25%);
+    color: hsl(0, 0%, 90%);
+    box-shadow: 3px 3px 8px hsl(210, 30%, 5%), -3px -3px 8px hsl(210, 30%, 25%);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: hsl(210, 30%, 35%);
+    transform: translateY(-3px);
+    box-shadow: 5px 5px 15px hsl(210, 30%, 5%), -5px -5px 10px hsl(210, 30%, 35%);
+  }
+  
+  hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, hsl(210, 30%, 5%), hsl(0, 0%, 50%), hsl(210, 30%, 5%));
+    box-shadow: 3px 3px 8px hsl(210, 30%, 5%), -3px -3px 8px hsl(210, 30%, 20%); /* Efecto 3D */
+    margin: 20px 0;
+  }
+  
+  @media(max-width: 700px) {
+    .nav .container,
+    .nav.active .container {
+      padding: 20px;
+    }
+  
+    .content {
+      padding: 20px;
+    }
+  }
+
+  
+.thumbnail{
+	width: 100%;
+	height: 200px;
+	-webkit-box-shadow: -1px -3px 5px -2px rgba(0, 0, 0, 0.5); /* Sombra más oscura */
+    -moz-box-shadow: -1px -3px 5px -2px rgba(0, 0, 0, 0.5);
+    box-shadow: -1px -3px 5px -2px rgba(0, 0, 0, 0.5);
+}
+
+.product{
+	border-radius: 0 0 4px 4px;
+}
+
+#cart-icon{
+	width: 75px;
+	display: inline-block;
+	margin-left: 15px;
+}
+
+#cart-total{
+	display: block;
+	text-align: center;
+	color: hsl(0, 0%, 98%); /* Texto blanco */
+	background-color: hsl(0, 70%, 40%); /* Rojo oscuro elegante */
+	width: 20px;
+	height: 25px;
+	border-radius: 75%;
+	font-size: 14px;
+}
+
+.col-lg-4, .col-lg-6, .col-lg-8, .col-lg-12{
+	margin-top: 10px;
+}
+
+.btn{
+	border-radius: 0;
+	background-color: hsl(210, 30%, 25%); /* Botones oscuros */
+	color: hsl(0, 0%, 90%); /* Texto claro */
+}
+
+.btn:hover{
+	background-color: hsl(210, 30%, 35%); /* Botones ligeramente más claros al pasar el cursor */
+}
+
+.row-image{
+	width: 100px;
+}
+
+.form-field{
+	width: 250px;
+	display: inline-block;
+	padding: 5px;
+	background-color: hsl(210, 30%, 20%); /* Fondo oscuro para campos de formulario */
+	color: hsl(0, 0%, 90%); /* Texto claro */
+}
+
+.cart-row{
+	display: flex;
+    align-items: flex-stretch;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid hsl(208, 42%, 94%); /* Línea de separación sutil */
+}
+
+.quantity{
+	display: inline-block;
+	font-weight: 700;
+	padding-right: 10px;
+	color: hsl(0, 0%, 95%); /* Texto claro */
+}
+
+.chg-quantity{
+	width: 12px;
+	cursor: pointer;
+	display: block;
+	margin-top: 5px;
+	transition: .1s;
+	color: hsl(0, 0%, 80%); /* Indicadores claros */
+}
+
+.chg-quantity:hover{
+	opacity: .6;
+}
+
+.hidden{
+	display: none !important;
+}
+
+
+.nav {
+  position: fixed;
+  background-color: hsl(210, 30%, 18%);
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all .3s ease-in-out;
+  box-shadow: 5px 5px 20px hsl(210, 30%, 5%), -5px -5px 15px hsl(210, 30%, 18%); /* Sombra 3D */
+}
+
+.nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav a {
+  color: hsl(0, 0%, 90%);
+  text-decoration: none;
+  padding: 7px 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav.active {
+  background-color: hsl(210, 30%, 25%);
+  box-shadow: 10px 10px 30px hsl(210, 30%, 5%), -10px -10px 25px hsl(210, 30%, 25%); /* Mayor profundidad en 3D */
+}
+
+.nav.active a {
+  color: hsl(0, 0%, 95%);
+}
+
+.nav a:hover {
+  color: hsl(0, 70%, 40%);
+  font-weight: bold;
+}
+
+.box-element {
+  box-shadow: 5px 5px 20px hsl(210, 30%, 5%), -5px -5px 15px hsl(210, 30%, 18%); /* Sombra 3D sutil */
+  background-color: hsl(210, 30%, 18%);
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box-element:hover {
+  transform: translateY(-5px);
+  box-shadow: 10px 10px 25px hsl(210, 30%, 5%), -10px -10px 20px hsl(210, 30%, 20%);
+}
+
+.btn {
+  border-radius: 5px;
+  background-color: hsl(210, 30%, 25%);
+  color: hsl(0, 0%, 90%);
+  box-shadow: 3px 3px 8px hsl(210, 30%, 5%), -3px -3px 8px hsl(210, 30%, 25%);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  background-color: hsl(210, 30%, 35%);
+  transform: translateY(-3px);
+  box-shadow: 5px 5px 15px hsl(210, 30%, 5%), -5px -5px 10px hsl(210, 30%, 35%);
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, hsl(210, 30%, 5%), hsl(0, 0%, 50%), hsl(210, 30%, 5%));
+  box-shadow: 3px 3px 8px hsl(210, 30%, 5%), -3px -3px 8px hsl(210, 30%, 20%); /* Efecto 3D */
+  margin: 20px 0;
+}
+
+@media(max-width: 700px) {
+  .nav .container,
+  .nav.active .container {
+    padding: 20px;
+  }
+
+  .content {
+    padding: 20px;
+  }
+}
+
+.white-text {
+  color: white;
+}
