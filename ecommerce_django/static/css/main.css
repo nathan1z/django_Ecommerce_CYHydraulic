@@ -254,3 +254,11 @@ hr {
 .white-text {
   color: white;
 }
+
+.thumbnail {
+  width: 100%;            /* Ocupa todo el ancho del contenedor */
+  height: auto;           /* Ajusta la altura automáticamente para mantener la proporción */
+  max-width: 400px;       /* Tamaño máximo opcional para mantener el control en pantallas grandes */
+  display: block;         /* Alineación */
+  object-fit: cover;      /* Opcional: corta la imagen si es necesario para mantener proporción */
+}
